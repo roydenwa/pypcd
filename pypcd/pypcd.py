@@ -81,10 +81,10 @@ def parse_header(lines):
     """
     metadata = {}
     for ln in lines:
-        ln = str(ln)
-        if ln.startswith('#') or len(ln) < 2:
+        #ln = str(ln)
+        if ln.startswith(b'#') or len(ln) < 2:
             continue
-        match = re.match('(\w+)\s+([\w\s\.]+)', ln)
+        match = re.match(b'(\w+)\s+([\w\s\.]+)', ln)
         if not match:
             warnings.warn("warning: can't understand line: %s" % ln)
             continue
