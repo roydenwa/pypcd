@@ -12,10 +12,12 @@ dimatura@cmu.edu, 2013-2018
 import re
 import struct
 import copy
-import cStringIO as sio
 import numpy as np
 import warnings
 import lzf
+
+from io import StringIO as sio
+
 
 HAS_SENSOR_MSGS = True
 try:
