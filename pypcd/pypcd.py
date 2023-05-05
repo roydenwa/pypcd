@@ -82,6 +82,9 @@ def parse_header(lines):
     metadata = {}
     for ln in lines:
         #ln = str(ln)
+        print(ln)
+        print(str(ln))
+        
         if ln.startswith(b'#') or len(ln) < 2:
             continue
         match = re.match(b'(\w+)\s+([\w\s\.]+)', ln)
