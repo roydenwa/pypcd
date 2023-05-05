@@ -281,7 +281,7 @@ def point_cloud_from_fileobj(f):
     while True:
         ln = f.readline().strip()
         header.append(ln)
-        if ln.startswith('DATA'):
+        if ln.startswith(b'DATA'):
             metadata = parse_header(header)
             dtype = _build_dtype(metadata)
             break
